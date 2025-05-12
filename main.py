@@ -144,7 +144,7 @@ def combine_songs(song_dir, output_file="combined.mp3", max_workers=None, bitrat
             ]
             
             # Collect results with progress bar
-            for future in tqdm(futures, total=len(song_files), desc="Processando áudios"):
+            for future in tqdm(futures, total=len(song_files), desc="Processing audio files"):
                 result = future.result()
                 if result:
                     temp_files.append(result)
